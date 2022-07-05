@@ -1,15 +1,24 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {  NavLink } from "react-router-dom";
+
+
 
 const Nav = () => (
 	<nav className="">
 		<ul className="nav">
-			<li className="nav-item">
+			<li className="nav-item ">
 				<NavLink
-					activeClassName="borber border-white text-white text-decoration-none"
-					className="nav-link "
-					exact
-					to="/"
+					 className={({ isActive }) =>
+            [
+              " text-white text-decoration-none bg-transparent",
+              isActive ? "active" : null,
+            ]
+              .filter(Boolean)
+              .join(" ")
+          }
+          end // <-- prevents matching on sub-routes, similar to exact
+          to="/"
+					
 				>
 					Home{' '}
 				</NavLink>
@@ -17,10 +26,16 @@ const Nav = () => (
 
 			<li className="nav-item">
 				<NavLink
-					activeClassName="borber border-white text-white text-decoration-none"
-					className="nav-link color-purple"
-					exact
-					to="/Gallery"
+					 className={({ isActive }) =>
+					 [
+					   "text-white text-decoration-none bg-transparent",
+					   isActive ? "active" : null,
+					 ]
+					   .filter(Boolean)
+					   .join(" ")
+				   }
+				   end // <-- prevents matching on sub-routes, similar to exact
+				   to="/Gallery"
 				>
 					Gallery{' '}
 				</NavLink>
@@ -28,10 +43,16 @@ const Nav = () => (
 
 			<li className="nav-item">
 				<NavLink
-					activeClassName="borber border-white text-white text-decoration-none"
-					className="nav-link "
-					exact
-					to="/MiniGame"
+					 className={({ isActive }) =>
+					 [
+					   "text-white text-decoration-none bg-transparent",
+					   isActive ? "active" : null,
+					 ]
+					   .filter(Boolean)
+					   .join(" ")
+				   }
+				   end // <-- prevents matching on sub-routes, similar to exact
+				   to="/MiniGame"
 				>
 					MiniGame{' '}
 				</NavLink>
@@ -39,10 +60,16 @@ const Nav = () => (
 
 			<li className="nav-item">
 				<NavLink
-					activeClassName="borber border-white text-white text-decoration-none"
-					className="nav-link "
-					exact
-					to="/Recipes"
+					 className={({ isActive }) =>
+					 [
+					   "text-white text-decoration-none bg-transparent",
+					   isActive ? "active" : null,
+					 ]
+					   .filter(Boolean)
+					   .join(" ")
+				   }
+				   end // <-- prevents matching on sub-routes, similar to exact
+				   to="/Recipes"
 				>
 					Recipes
 				</NavLink>

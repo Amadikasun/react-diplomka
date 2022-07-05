@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Home, Gallery, MiniGame, Recipes } from './pages';
 import { Nav } from './layout';
 
@@ -29,21 +29,21 @@ function App() {
 					</div>
 				</header>
 
-				<Switch>
-					<Route exact path='/MiniGame'>
+				<Routes>
+					<Route  path='/MiniGame' element={<MiniGame />}>
 						{' '}
-						<MiniGame />
+						
 					</Route>
-					<Route exact path='/Gallery'>
-						<Gallery />
+					<Route  path='/Gallery' element={<Gallery />}>
+						
 					</Route>
-					<Route exact path='/Recipes'>
-						<Recipes />
+					<Route  path='/Recipes' element={<Recipes />}>
+						
 					</Route>
-					<Route exact path='/'>
-						<Home />
+					<Route  path='/' element={<Home />}>
+						
 					</Route>
-				</Switch>
+				</Routes>
 			</Router>
 			<footer className=' bg-indido text-center text-lg-start text-white'>
         <div className="container p-2">
