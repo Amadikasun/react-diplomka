@@ -1,14 +1,14 @@
-//import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
-//import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap';
 
-
 function Home() {
-/*const [post, setPost] = useState('');
+    const file_name = 'home.md'
+const [post, setPost] = useState('');
     useEffect(() => {
-        import(`./Markdown`)
+        import(`./Markdown/${file_name}`)
             .then(res => {
                 fetch(res.default)
                     .then(res => res.text())
@@ -17,9 +17,7 @@ function Home() {
             })
             .catch(err => console.log(err));
     });
-     <Markdown>
-                        {post}
-                    </Markdown>	*/
+     
 
     return (
 		<Layout> 
@@ -27,7 +25,9 @@ function Home() {
             <div className='row p-3 border bg-light  ' id='center-frame'>
                 <div className='col-lg-8 border indigo'>
                     <div className='justify-content-center  p-5 lh-base'>  
-                   	         
+                    <Markdown>
+                        {post}
+                    </Markdown>	    
                     </div>
                 </div>
                 
