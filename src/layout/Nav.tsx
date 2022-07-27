@@ -5,13 +5,13 @@ import {  NavLink } from "react-router-dom";
 
 const Nav = () => (
 	<nav className="">
-		<ul className="nav">
-			<li className="nav-item ">
+		<ul className="nav nav-pills flex-column flex-lg-row">
+			<li className="button flex-fill  text-center ">
 				<NavLink
 					 className={({ isActive }) =>
             [
               " text-white text-decoration-none bg-transparent",
-              isActive ? "active" : null,
+              isActive ? "activebutton" : null,
             ]
               .filter(Boolean)
               .join(" ")
@@ -24,12 +24,12 @@ const Nav = () => (
 				</NavLink>
 			</li>
 
-			<li className="nav-item">
+			<li className="button flex-fill text-center ">
 				<NavLink
 					 className={({ isActive }) =>
 					 [
 					   "text-white text-decoration-none bg-transparent",
-					   isActive ? "active" : null,
+					   isActive ? "activebutton" : null,
 					 ]
 					   .filter(Boolean)
 					   .join(" ")
@@ -41,12 +41,12 @@ const Nav = () => (
 				</NavLink>
 			</li>
 
-			<li className="nav-item">
+			<li className="button flex-fill text-center ">
 				<NavLink
 					 className={({ isActive }) =>
 					 [
 					   "text-white text-decoration-none bg-transparent",
-					   isActive ? "active" : null,
+					   isActive ? "activebutton" : null,
 					 ]
 					   .filter(Boolean)
 					   .join(" ")
@@ -58,12 +58,12 @@ const Nav = () => (
 				</NavLink>
 			</li>
 
-			<li className="nav-item">
+			<li className="button flex-fill  text-center ">
 				<NavLink
 					 className={({ isActive }) =>
 					 [
 					   "text-white text-decoration-none bg-transparent",
-					   isActive ? "active" : null,
+					   isActive ? "activebutton" : null,
 					 ]
 					   .filter(Boolean)
 					   .join(" ")

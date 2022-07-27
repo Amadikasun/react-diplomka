@@ -21,11 +21,11 @@ function App() {
 						<p>but not everything is so easy.</p>
 					</div>
 
-					<div className='col-7 '>
+					<div className='col-6 '>
 						<Nav />
-						<li className='nav-link'>
-							<div className='toggle'></div>
-						</li>
+						<li className='d-flex d-lg-block justify-content-center p-3 '>
+                	<div className=' toggle'></div>
+            			</li>
 					</div>
 				</header>
 

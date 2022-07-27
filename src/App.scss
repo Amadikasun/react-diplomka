@@ -23,9 +23,29 @@
         padding-left: 15%;
     }
     
-    .nav {
-        padding-left: 3% !important;
-        align-items: center;
+    .button {
+        background: transparent;
+        display: inline-block;
+        cursor: pointer;
+        color: #eae1e1;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        outline: 0;
+    }
+    
+    .activebutton {
+        border-radius: 6px;
+        border: 1px solid;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        outline: 0;
     }
     
     .toggle {

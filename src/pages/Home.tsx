@@ -18,12 +18,11 @@ const [post, setPost] = useState('');
             .catch(err => console.log(err));
     });
      
-
     return (
 		<Layout> 
         <div className='container  w-100 bg-light'>
             <div className=' col row  ps-5  bg-light  ' id='center-frame'>
-                <div className='col-lg-8 border indigo'>
+                <div className='col-lg-8 border'>
                     <div className='justify-content-center  p-5 lh-base'>  
                     <Markdown>
                         {post}
