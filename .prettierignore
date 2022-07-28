@@ -1,0 +1,5 @@
+# artifacts
+/build
+
+# lockfiles
+pnpm-lock.yaml
