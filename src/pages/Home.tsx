@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
 import Markdown from 'markdown-to-jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-bootstrap';
 
 function Home() {
     const file_name = 'home.md'
@@ -20,7 +18,7 @@ const [post, setPost] = useState('');
      
     return (
 		<Layout> 
-        <div className='container  w-100 bg-light'>
+        <div className='container w-100 bg-light'>
             <div className=' col row  ps-5  bg-light  ' id='center-frame'>
                 <div className='col-lg-8 border'>
                     <div className='justify-content-center  p-5 lh-base'>  

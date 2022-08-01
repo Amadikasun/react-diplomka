@@ -1,33 +1,34 @@
 import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
 import { Card, Button } from 'react-bootstrap';
-import Markdown from 'markdown-to-jsx';
-import 'react-bootstrap';
+//  import Markdown from 'markdown-to-jsx';
+import Markdown from '../components/Markdown';
 
 function Gallery() {
-  const file_name = 'home.md'
-  const [post, setPost] = useState('');
-      useEffect(() => {
-          import(`./Markdown/${file_name}`)
-              .then(res => {
-                  fetch(res.default)
-                      .then(res => res.text())
-                      .then(res => setPost(res))
-                      .catch(err => console.log(err));
-              })
-              .catch(err => console.log(err));
-      });
+  // const file_name = 'home.md'
+//   const [post, setPost] = useState('');
+//       useEffect(() => {
+//           import(`./Markdown/${file_name}`)
+//               .then(res => {
+//                   fetch(res.default)
+//                       .then(res => res.text())
+//                       .then(res => setPost(res))
+//                       .catch(err => console.log(err));
+//               })
+//               .catch(err => console.log(err));
+//       });
      
 
-return (
+ return (
 <Layout>
+  
       <div className='container  w-100 bg-light'>
         <div className='col row  ps-5  bg-light  ' id='center-frame'>
         <div className='col border '>
                     <div className='justify-content-center  p-5 lh-base'>  
-                    <Markdown>
-                        {post}
-                    </Markdown>	    
+                     {/* <Markdown>
+                    </Markdown>	      */}
+                     {/* {Markdown('../Markdown/home.md')} */}
                     </div>
                 </div>
 {/*
@@ -71,7 +72,7 @@ return (
 
             </div>
         </div>
-        
-        </Layout>);
-}
+        </Layout>
+          );
+} 
 export default Gallery;

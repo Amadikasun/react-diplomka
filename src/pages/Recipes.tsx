@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 
 const Recipes = () => 
 <Layout>
-    <div className='container bg-light w-100 '>
+    <div className='container bg-light w-100'>
     <div className='row p-3 border bg-light ' id='center-frame'>
 
 <div className='col p-3'  > 

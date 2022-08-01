@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Home, Gallery, MiniGame, Recipes } from './pages';
 import { Nav } from './layout';
@@ -28,20 +26,15 @@ function App() {
             			</li>
 					</div>
 				</header>
-
-				<Routes>
+			<Routes>
 					<Route  path='/MiniGame' element={<MiniGame />}>
 						{' '}
-						
 					</Route>
 					<Route  path='/Gallery' element={<Gallery />}>
-						
 					</Route>
 					<Route  path='/Recipes' element={<Recipes />}>
-						
 					</Route>
-					<Route  path='/' element={<Home />}>
-						
+					<Route  path='/' element={<Home />}>	
 					</Route>
 				</Routes>
 			</Router>
@@ -59,7 +52,14 @@ function App() {
         </div>
        
 			</footer>
-		</div>
+
+
+
+
+
+
+
+	</div>
 	
   );
 }
