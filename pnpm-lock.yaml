@@ -10,7 +10,7 @@ specifiers:
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@types/react-router-dom': ^5.3.3
-  bootstrap: ^3.4.1
+  bootstrap: 5.2.0
   eslint-config-prettier: ^8.5.0
   markdown-to-jsx: ^7.1.7
   marked: ^4.0.18
@@ -25,7 +25,7 @@ specifiers:
   web-vitals: ^2.1.0
 
 dependencies:
-  bootstrap: 3.4.1
+  bootstrap: 5.2.0_@popperjs+core@2.11.5
   markdown-to-jsx: 7.1.7_react@18.2.0
   marked: 4.0.18
   react: 18.2.0
@@ -3372,9 +3372,12 @@ packages:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
 
-  /bootstrap/3.4.1:
-    resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
-    engines: {node: '>=6'}
+  /bootstrap/5.2.0_@popperjs+core@2.11.5:
+    resolution: {integrity: sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.5
+    dependencies:
+      '@popperjs/core': 2.11.5
     dev: false
 
   /brace-expansion/1.1.11:

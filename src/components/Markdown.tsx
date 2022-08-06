@@ -2,27 +2,97 @@
 //  import second from 'markdown-to-jsx';
 import React from 'react';
 import {marked} from 'marked';
-import { Pipe } from 'stream';
+// import { Pipe } from 'stream';
 
-// import file from '../pages/Markdown/home'
-{/* <template>
-     <Markdown [src] ='${file_name}' /> 
-</template> */}
 
-function Markdown(file_name :string) {
 
-   fetch(file_name)
-   .then(file_name => {
-    return console.log(file_name.text())
-  })
-  .then(text => {
-    return console.log(text)
-//     this.setState({
-//       markdown: marked(text)
+function Markdown(markdown :string) {
+  getContent(`${markdown}`);
       
-//     })
-  })
-   
+};
+    async function getContent(fileName: string){
+       let fileContent = "Loading...";
+       fileContent = await fetch(`/md/${fileName}`)
+          .then(function (response) {
+            return response.text();         
+          })
+          .then(function (datac) {
+            return marked(datac);         
+          }); 
+        };
+      
+    
+
+export default Markdown
+
+
+
+
+
+// export default ({
+//   name: "MarkdownDisplay",
+//   props: {
+//     markdown: {
+//       type: String,
+//       required: true,
+//     },
+//     fileContent: String,
+//   },
+  
+//     data: function () {
+//     return {
+//       fileContent: "**Loading...**",
+//       fileToRender: null,
+//       rawContent: null,
+//     };
+//   },
+//   created: function () {
+//     this.getContent(`${this.markdown}`);
+//   },
+//   methods: {
+//     async getContent(fileName: string) {
+//      this.fileContent = await fetch(`/md/${fileName}`)
+//         .then(function (response) {
+//           return response.text();         
+//         })
+//         .then(function (datac) {
+//           return marked(datac);         
+//         }); 
+//     },
+//   },
+// });
+
+
+
+
+
+
+
+
+
+
+
+// markdown: String;
+// fileContent: "**Loading...**";
+
+// function Markdown(fileName :string) {
+//   this.getContent(`${this.markdown}`);
+
+//   };
+// //     this.setState({
+// //       markdown: marked(text)
+      
+// //     })
+  
+//    async getContent(fileName: string) {
+//   let fileContent = await fetch(`/md/${fileName}`)
+//   .then(function (response) {
+//     return response.text();         
+//   })
+//   .then(function (datac) {
+//     return marked(datac);         
+//   }); 
+// };
 //   render() {
 //          const { markdown } = this.state;
        
@@ -51,7 +121,7 @@ function Markdown(file_name :string) {
 //       </section>
 //     )
 //   }
-}
+// }
 
 
 
@@ -93,4 +163,4 @@ function Markdown(file_name :string) {
 //   },
 // }
 
-export default Markdown
+// export default Markdown

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { Home, Gallery, MiniGame, Recipes } from './pages';
+import { Home, Gallery, MiniGame, Recipes, Resume } from './pages';
 import { Nav } from './layout';
 
 function App() {
@@ -21,9 +21,9 @@ function App() {
 
 					<div className='col-6 '>
 						<Nav />
-						<li className='d-flex d-lg-block justify-content-center p-3 '>
-                	<div className=' toggle'></div>
-            			</li>
+						<li className="d-flex d-lg-block justify-content-center p-3 nav-link">
+        <div className="toggle"></div>
+      </li>
 					</div>
 				</header>
 			<Routes>
@@ -33,6 +33,8 @@ function App() {
 					<Route  path='/Gallery' element={<Gallery />}>
 					</Route>
 					<Route  path='/Recipes' element={<Recipes />}>
+					</Route>
+					<Route  path='/Resume' element={<Resume />}>
 					</Route>
 					<Route  path='/' element={<Home />}>	
 					</Route>

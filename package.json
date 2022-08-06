@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.4.1",
+    "bootstrap": "5.2.0",
     "markdown-to-jsx": "^7.1.7",
     "marked": "^4.0.18",
     "react": "^18.2.0",
