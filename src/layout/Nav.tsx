@@ -57,22 +57,6 @@ const Nav = () => (
 					MiniGame{' '}
 				</NavLink>
 			
-
-			
-				<NavLink
-					 className={({ isActive }) =>
-					 [
-					   "button flex-fill text-center nav-link",
-					   isActive ? "activebutton" : null,
-					 ]
-					   .filter(Boolean)
-					   .join(" ")
-				   }
-				   end // <-- prevents matching on sub-routes, similar to exact
-				   to="/Recipes"
-				>
-					Recipes
-				</NavLink>
 			
 				<NavLink
 					 className={({ isActive }) =>

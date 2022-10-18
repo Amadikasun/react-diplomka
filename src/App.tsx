@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { Home, Gallery, MiniGame, Recipes, Resume } from './pages';
+import { Home, Gallery, MiniGame, Resume } from './pages';
 import { Nav } from './layout';
 
 function App() {
@@ -15,15 +15,14 @@ function App() {
 					</div>
 
 					<div className='col-3 text-center align-self-center '>
-						I do my best to learn React
-						<p>but not everything is so easy.</p>
+						Amadikasun
 					</div>
 
-					<div className='col-6 '>
+					<div className='col-6 text-center'>
 						<Nav />
-						<li className="d-flex d-lg-block justify-content-center p-3 nav-link">
+						{/* <li className="d-flex d-lg-block justify-content-center p-3 nav-link">
         <div className="toggle"></div>
-      </li>
+      </li> */}
 					</div>
 				</header>
 			<Routes>
@@ -32,8 +31,7 @@ function App() {
 					</Route>
 					<Route  path='/Gallery' element={<Gallery />}>
 					</Route>
-					<Route  path='/Recipes' element={<Recipes />}>
-					</Route>
+					
 					<Route  path='/Resume' element={<Resume />}>
 					</Route>
 					<Route  path='/' element={<Home />}>	
