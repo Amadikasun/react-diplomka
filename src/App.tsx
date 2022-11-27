@@ -4,9 +4,12 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Home, Gallery, MiniGame, Resume } from './pages';
 import { Nav } from './layout';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 function App() {
+	const queryClient = new QueryClient()
   return (
+	<QueryClientProvider client={queryClient}>
 		<div className='apps'>
 			<Router>
 				<header>
@@ -54,12 +57,8 @@ function App() {
 			</footer>
 
 
-
-
-
-
-
 	</div>
+	</QueryClientProvider>
 	
   );
 }

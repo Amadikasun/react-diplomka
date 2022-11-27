@@ -1,23 +1,39 @@
 import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
 import { Card, Button } from 'react-bootstrap';
-//  import Markdown from 'markdown-to-jsx';
-import Markdown from '../components/Markdown';
+import MarkdownDisplay from 'markdown-to-jsx';
 
-function Gallery() {
-  // const file_name = 'home.md'
-//   const [post, setPost] = useState('');
-//       useEffect(() => {
-//           import(`./Markdown/${file_name}`)
-//               .then(res => {
-//                   fetch(res.default)
-//                       .then(res => res.text())
-//                       .then(res => setPost(res))
-//                       .catch(err => console.log(err));
-//               })
-//               .catch(err => console.log(err));
-//       });
+function Gallery(props:any) {
+   const file_name = 'gallery.md'
+   const [post, setPost] = useState('');
+       useEffect(() => {
+          import(`./Markdown/${file_name}`)
+              .then(res => {
+                  fetch(res.default)
+                       .then(res => res.text())
+                      .then(res => setPost(res))
+                       .catch(err => console.log(err));
+              })
+               .catch(err => console.log(err));
+      });
      
+  // const [Images, setImages] = useState([]);
+ 
+  // useEffect(() => {
+  //  if (props.detail.images && props.detail.images.length > 0) {
+  //   let images:any[] = [];
+  //   console.log(images);
+
+  //   props.detail.images.map((item:any) => {
+  //    images.push({
+  //     original: `http://localhost:5000/${item}`,
+  //     thumbnail: `http://localhost:5000/${item}`,
+  //    });
+  //   });
+  //   setImages(images);
+  //  }
+  // }, [props.detail]);
+ 
 
  return (
 <Layout>
@@ -26,53 +42,24 @@ function Gallery() {
         <div className='col row  ps-5  bg-light  ' id='center-frame'>
         <div className='col border '>
                     <div className='justify-content-center  p-5 lh-base'>  
-                     {/* <Markdown>
-                    </Markdown>	      */}
-                     {/* {Markdown('../Markdown/home.md')} */}
+                    <MarkdownDisplay>
+                        {post}
+                    </MarkdownDisplay>
+                     
                     </div>
                 </div>
-{/*
-    <section className='section'>
-  <h2 className='h2'>Table of content</h2>
-  <div className='container'>
-    
-     <img src='https://previews.123rf.com/images/melnikof/melnikof1704/melnikof170400174/76760411-nature-spring-blooming-poppy-concept-close-up-on-massed-display-of-blooming-red-poppies-on-a-sunny-s.jpg'> </img> 
-    
-  </div>
-</section>
-*/}
-{/* <div className='col m-0 p-3 '  > 
-<Card  style={{ width: '25rem'}}>
-  <Card.Img variant="top" src="https://previews.123rf.com/images/melnikof/melnikof1704/melnikof170400174/76760411-nature-spring-blooming-poppy-concept-close-up-on-massed-display-of-blooming-red-poppies-on-a-sunny-s.jpg" />
-  <Card.Body>
-    <Card.Title>Pernštejsnské jestřabí a okolí</Card.Title>
-    <Card.Text>
-      Fotky přírody a historických památek z Pernštejského jestřabí a blízkého okolí.
-    </Card.Text>
-    <Button variant="primary">Chci vidět víc</Button>
-  </Card.Body>
-</Card>     
-</div>
 
-<div className='col p-3'  > 
-<Card  style={{ width: '25rem' }}>
-  <Card.Img variant="top" src="https://previews.123rf.com/images/melnikof/melnikof1704/melnikof170400174/76760411-nature-spring-blooming-poppy-concept-close-up-on-massed-display-of-blooming-red-poppies-on-a-sunny-s.jpg" />
-  <Card.Body>
-    <Card.Title>Pernštejsnské jestřabí a okolí</Card.Title>
-    <Card.Text>
-      Fotky přírody a historických památek z Pernštejského jestřabí a blízkého okolí.
-    </Card.Text>
-    <Button variant="primary">Chci vidět víc</Button>
-  </Card.Body>
-</Card>     
-</div>
-*/}
 
+<div>
+    {/* <iframe title={Images?.name} 
+    src={Images?}/> */}
+   </div>
 
 
             </div>
         </div>
         </Layout>
           );
-} 
+} ;
+
 export default Gallery;

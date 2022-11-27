@@ -4,10 +4,10 @@
 
 I'm Jana, a front-end developer who works on UI designs as well. If you wanted know about my proffesional skill, see me ***resume***.
 
-Traveling and photography is one of my hobbies which I do mainly during the summer months. When you click on the images you will appear in the individual folders. If you want to see photos from individual places you have to click on **"All traveling"**.
+Traveling and photography is one of my hobbies which I do mainly during the summer months. If you want to see photos just click on **"Gallery"**.
 
-You can find the MiniGames section on my website, this section contains the basic games Flappy bird and Tic-Tac-Toe.
+You can find the MiniGame section on my website, this section contains the basic game Tic-Tac-Toe.
 
-*I hope you enjoy these games.*
+*I hope you enjoy this game.*
 
-**Jana Turoňová**
+**Jana Turonova**

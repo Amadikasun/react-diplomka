@@ -1,20 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
-import Markdown from 'markdown-to-jsx';
+import MarkdownDisplay from 'markdown-to-jsx';
 
 function Home() {
-    const file_name = 'home.md'
-const [post, setPost] = useState('');
+    const file_name = 'home.md';
+ const [post, setPost] = useState('');
     useEffect(() => {
-        import(`./Markdown/${file_name}`)
-            .then(res => {
-                fetch(res.default)
+         import(`./Markdown/${file_name}`)
+             .then(res => {
+                 fetch(res.default)
                     .then(res => res.text())
                     .then(res => setPost(res))
-                    .catch(err => console.log(err));
-            })
+                     .catch(err => console.log(err));
+             })
             .catch(err => console.log(err));
     });
+
      
     return (
 		<Layout> 
@@ -22,9 +23,11 @@ const [post, setPost] = useState('');
             <div className=' col row  ps-5  bg-light  ' id='center-frame'>
                 <div className='col-lg-8 border'>
                     <div className='justify-content-center  p-5 lh-base'>  
-                    <Markdown>
+                     
+                    <MarkdownDisplay>
                         {post}
-                    </Markdown>	    
+                    </MarkdownDisplay> 
+                       
                     </div>
                 </div>
                 
