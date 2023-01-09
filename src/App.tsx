@@ -13,15 +13,13 @@ function App() {
 		<div className='apps'>
 			<Router>
 				<header>
-					<div className='col-2 align-self-center '>
+					<div className='col-3 align-self-center '>
 						<img src={logo} className=' App-logo' alt='logo' />
 					</div>
 
-					<div className='col-3 text-center align-self-center '>
-						Amadikasun
-					</div>
+					
 
-					<div className='col-6 text-center'>
+					<div className='col-9 text-center'>
 						<Nav />
 						{/* <li className="d-flex d-lg-block justify-content-center p-3 nav-link">
         <div className="toggle"></div>
@@ -41,15 +39,12 @@ function App() {
 					</Route>
 				</Routes>
 			</Router>
-			<footer className=' bg-indido text-center text-lg-start text-white'>
-        <div className="container p-2">
-            <section className="mb-1">
-                <p>
-                    
-                </p>
-            </section>
+			<footer className='d-flex flex-column  bg-indido text-center text-lg-start text-white'>
+				<div className="text-center">
+			<a className="  d-inline col-4 text-decoration-none button" href='https://github.com/Amadikasun'>Github </a>
+        <a className=" d-inline col-4 p-2 text-decoration-none button" href='#'>Instagram </a>
+        <a className="d-inline col-4  text-decoration-none button" href="https://www.linkedin.com/in/jana-turonova/">LinkedIn </a>
         </div>
-        
         <div className="text-center p-2 bg-dark">
             © 2022 Copyright: Jana Turoňová
         </div>
