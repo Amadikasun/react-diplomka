@@ -30,7 +30,10 @@
       "react-app",
       "react-app/jest",
       "prettier"
-    ]
+    ],
+    "rules":{
+      "jsx-ally/anchor-is-valid": "off"
+    }
   },
   "browserslist": {
     "production": [
