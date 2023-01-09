@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Layout } from '../layout';
-import { Card, Button } from 'react-bootstrap';
+// import { Card, Button } from 'react-bootstrap';
 import MarkdownDisplay from 'markdown-to-jsx';
 
 function Gallery(props:any) {
