@@ -42,7 +42,7 @@ function App() {
 			<footer className='d-flex flex-column  bg-indido text-center text-lg-start text-white'>
 				<div className="text-center">
 			<a className="  d-inline col-4 text-decoration-none button" href='https://github.com/Amadikasun'>Github </a>
-        <a className=" d-inline col-4 p-2 text-decoration-none button" href='#'>Instagram </a>
+        <a className=" d-inline col-4 p-2 text-decoration-none button" href='https://github.com/Amadikasun'>Instagram </a>
         <a className="d-inline col-4  text-decoration-none button" href="https://www.linkedin.com/in/jana-turonova/">LinkedIn </a>
         </div>
         <div className="text-center p-2 bg-dark">
