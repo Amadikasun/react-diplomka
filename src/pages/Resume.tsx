@@ -1,21 +1,18 @@
-import React, {useState, useEffect} from 'react';
+
 import { Layout } from '../layout';
-import MarkdownDisplay from 'markdown-to-jsx';
+import Markdown from '../components/Markdown';
 
 function Resume() {
-    const file_name = 'resume.md';
- const [post, setPost] = useState('');
-    useEffect(() => {
-         import(`./Markdown/${file_name}`)
-             .then(res => {
-                 fetch(res.default)
-                    .then(res => res.text())
-                    .then(res => setPost(res))
-                     .catch(err => console.log(err));
-             })
-            .catch(err => console.log(err));
-    });
+    const fileName = `./Markdown/resume.md`;
+   function MarkdownInsert(){
+    function createMarkup() {
+        return {
+            __html: `${Markdown(fileName)}`
+        }
+    }
 
+    return <div dangerouslySetInnerHTML={createMarkup()} />;
+}
      
     return (
     <Layout> 
@@ -23,9 +20,7 @@ function Resume() {
         <div className='col row  ps-5  bg-light  ' id='center-frame'>
         <div className='col border '>
             
-            <MarkdownDisplay>
-                        {post}
-                    </MarkdownDisplay> 
+        <MarkdownInsert></MarkdownInsert>
                     </div>  
                 </div>
                 </div>
