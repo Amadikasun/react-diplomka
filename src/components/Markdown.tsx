@@ -3,7 +3,9 @@ import { marked } from 'marked';
 
 
 function Markdown(props :{ children: string; } ) {
-    let html ="Loading";
+    let text = "Loading...";
+    let html = "Loading...";
+    function LoadFile(){
     const [post, setPost] = useState('');
     useEffect(() => {
         fetch(props.children)
@@ -12,10 +14,18 @@ function Markdown(props :{ children: string; } ) {
             .catch(err => console.log(err));
             
     });
-    
+    let condition = post;
+    console.log( condition[0])
+    if (condition[0] === undefined){
+        text = 'Loading...'
+    } else{
+        text = post
+    }
+    return text
+    }
     
     function createHTML(){
-     html = marked(post);  
+     html = marked(LoadFile());  
      return {__html: html} 
     }
     return <div dangerouslySetInnerHTML= {createHTML()}/>
