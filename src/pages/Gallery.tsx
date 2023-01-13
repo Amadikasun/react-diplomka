@@ -6,17 +6,7 @@ import Markdown from '../components/Markdown';
 
 function Gallery(props:any) {
    const fileName = `./Markdown/gallery.md`;
-   function MarkdownInsert(){
-    function createMarkup() {
-        return {
-            __html: `${Markdown(fileName)}`
-        }
-    }
-
-    return <div dangerouslySetInnerHTML={createMarkup()} />;
-}
-
- 
+  
 
  return (
 <Layout>
@@ -25,15 +15,13 @@ function Gallery(props:any) {
         <div className='col row  ps-5  bg-light  ' id='center-frame'>
         <div className='col border '>
                     <div className='justify-content-center  p-5 lh-base'>  
-                    <MarkdownInsert></MarkdownInsert>
+                    <Markdown>{fileName}</Markdown>
                      
                     </div>
                 </div>
 
 
 <div>
-    {/* <iframe title={Images?.name} 
-    src={Images?}/> */}
    </div>
 
 

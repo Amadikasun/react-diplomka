@@ -3,16 +3,7 @@ import { Layout } from '../layout';
 import Markdown from '../components/Markdown';
 
 function Resume() {
-    const fileName = `./Markdown/resume.md`;
-   function MarkdownInsert(){
-    function createMarkup() {
-        return {
-            __html: `${Markdown(fileName)}`
-        }
-    }
-
-    return <div dangerouslySetInnerHTML={createMarkup()} />;
-}
+    let fileName = `./Markdown/resume.md`;
      
     return (
     <Layout> 
@@ -20,7 +11,7 @@ function Resume() {
         <div className='col row  ps-5  bg-light  ' id='center-frame'>
         <div className='col border '>
             
-        <MarkdownInsert></MarkdownInsert>
+        <Markdown>{fileName}</Markdown>
                     </div>  
                 </div>
                 </div>

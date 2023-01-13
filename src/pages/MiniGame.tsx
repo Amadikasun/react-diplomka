@@ -4,17 +4,7 @@ import Markdown from '../components/Markdown';
 
 
 const MiniGame = () => {
-    const fileName = `./Markdown/ruleplay.md`;
-
-  function MarkdownInsert(){
-            function createMarkup() {
-                return {
-                    __html: `${Markdown(fileName)}`
-                }
-            }
-
-            return <div dangerouslySetInnerHTML={createMarkup()} />;
-        }
+    let fileName = `./Markdown/ruleplay.md`;
 
 
 
@@ -26,7 +16,7 @@ const MiniGame = () => {
                     <iframe className="w-100" src="https://minigamesdiplomka.netlify.app/index.html" title="Tic Tac Toe Game"></iframe>
 
                     
-                    <MarkdownInsert></MarkdownInsert>
+                    <Markdown>{fileName}</Markdown>
                     
                 </div>
             </div>

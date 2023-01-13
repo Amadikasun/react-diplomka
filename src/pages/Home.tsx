@@ -4,17 +4,7 @@ import Markdown from '../components/Markdown';
 
 
 function Home() {
-    const fileName = `./Markdown/home.md`;
-
-  function MarkdownInsert(){
-            function createMarkup() {
-                return {
-                    __html: `${Markdown(fileName)}`
-                }
-            }
-
-            return <div dangerouslySetInnerHTML={createMarkup()} />;
-        }
+    let fileName = `./Markdown/home.md`;
 
 return (
     <Layout>
@@ -22,7 +12,8 @@ return (
             <div className=' col row  ps-5  bg-light  ' id='center-frame'>
                 <div className='col-lg-8 border'>
                     <div className='justify-content-center  p-5 lh-base'>
-                        <MarkdownInsert></MarkdownInsert>
+                        
+                        <Markdown>{fileName}</Markdown>
                     </div>
                 </div>
 
