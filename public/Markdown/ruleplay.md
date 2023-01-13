@@ -1,8 +1,11 @@
+<center> 
+
 ## How to play?
 
 ![computer mouse](https://icons.iconarchive.com/icons/iconsmind/outline/32/Mouse-2-icon.png)
 ![computer mouse](https://icons.iconarchive.com/icons/iconsmind/outline/32/Hand-Touch-icon.png)
 *You need a mouse or touch screen.*
+</center>
 
 
 ***
