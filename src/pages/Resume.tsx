@@ -3,7 +3,7 @@ import { Layout } from '../layout';
 import Markdown from '../components/Markdown';
 
 function Resume() {
-    let fileName = `./Markdown/resume.md`;
+    let fileName = `/markdown/resume.md`;
      
     return (
     <Layout> 

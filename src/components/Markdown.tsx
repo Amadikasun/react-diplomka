@@ -8,7 +8,7 @@ function Markdown(props :{ children: string; } ) {
     function LoadFile(){
     const [post, setPost] = useState('');
     useEffect(() => {
-        fetch(props.children)
+        fetch(process.env.REACT_APP_API_URL + props.children)
             .then(res => res.text())
             .then(res => setPost(res))
             .catch(err => console.log(err));

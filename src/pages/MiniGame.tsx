@@ -4,7 +4,7 @@ import Markdown from '../components/Markdown';
 
 
 const MiniGame = () => {
-    let fileName = `./Markdown/ruleplay.md`;
+    let fileName = `/markdown/ruleplay.md`;
 
 
 

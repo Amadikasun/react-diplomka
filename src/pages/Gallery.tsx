@@ -6,7 +6,7 @@ import ImageList from '../components/Images';
 
 
 function Gallery(props:any) {
-   const fileName = `./Markdown/gallery.md`;
+   const fileName = `/markdown/gallery.md`;
   
 
  return (

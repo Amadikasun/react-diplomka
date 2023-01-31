@@ -4,7 +4,7 @@ import Markdown from '../components/Markdown';
 
 
 function Home() {
-    let fileName = `./Markdown/home.md`;
+    let fileName = `/markdown/home.md`;
 
 return (
     <Layout>
