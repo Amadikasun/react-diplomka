@@ -3,7 +3,7 @@ import { marked } from 'marked';
 
 
 function Markdown(props :{ children: string; } ) {
-    let text = "Loading...";
+    let text :string;
     let html = "Loading...";
     function LoadFile(){
     const [post, setPost] = useState('');
