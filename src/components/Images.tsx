@@ -38,12 +38,12 @@ const ImageList: React.FunctionComponent = () => {
           <img className='imagesAPI' src={image.url} alt={image.title} onClick={() => handleOpen(image)} />
         </div>
       ))}
-      <Modal show={showModal} onHide={handleClose} centered>
+      <Modal size="lg" show={showModal} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedImage?.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <img src={selectedImage?.url} alt={selectedImage?.title} />
+        <Modal.Body className="d-flex justify-content-center">
+          <img className="modalimg p-3" src={selectedImage?.url} alt={selectedImage?.title} />
         </Modal.Body>
         <Modal.Footer>
           <p>{selectedImage?.description}</p>
